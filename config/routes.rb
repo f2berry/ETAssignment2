@@ -1,9 +1,18 @@
 WikiRails::Application.routes.draw do
+
+  root :to => 'pages#home'
+
+  match '/home', :to => 'pages#home'
+  match '/paintballField',   :to => 'pages#paintballField'
+  match '/paintballMarker',    :to => 'pages#paintballMarker'
+
   get "pages/home"
-
   get "pages/paintballField"
-
   get "pages/paintballMarker"
+
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,10 +60,6 @@ WikiRails::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
