@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WikiRails</title>
+  <title>WikiRails | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-
-<h1>WIKIRAILS</h1>
-<h2>The ultimate paintball database</h2>
-
+  <%= csrf_meta_tags %> 
 </head>
-<body>
 
-<%= yield %>
+<body>
+<div class="container">
+  <header>
+    <h1 class="headerTitle">WIKIRAILS</h1>
+    <h2 class="headerTitle">The ultimate paintball database</h2>
+    <%= image_tag("baniere.jpg", :alt => "Example baniere", :class => "round") %>
+  </header>
+  <nav class="round"> 
+     <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="paintballField">Paintball field</a></li>
+      <li><a href="paintballMarker">Paintball marker</a></li>
+     </ul> 
+  </nav>
+  <section class="round">
+    <%= yield %>
+  </section>
+</div>
 
 </body>
 
 <footer>
-<p> Copyright François de Berry - 2013</p>
+  <nav class="round">
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="paintballField">Paintball field</a></li>
+      <li><a href="paintballMarker">Paintball marker</a></li>
+    </ul>
+  </nav>
+  <p class="footerText">Copyright François de Berry - 2013</p>
 </footer>
 
 </html>

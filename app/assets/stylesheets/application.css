@@ -11,3 +11,131 @@
  *= require_self
  *= require_tree .
  */
+
+.container {
+  width: 710px;
+   -webkit-box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+}
+
+body {
+  color:black;
+  background-color:white;
+  background-image: url(bg.jpg);
+  background-attachment:fixed;
+}
+
+header {
+  padding-top: 20px;
+}
+
+.headerTitle {
+	color: white;
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+div {
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Text */
+
+p {
+	font-family: serif;
+	text-align: justify;
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+/* Navigation */
+
+nav {
+  float: none;
+}
+
+nav {
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+  -webkit-box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+  box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* rounded corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerText {
+	text-align: center;
+	color: white;
+}

@@ -2,9 +2,9 @@ WikiRails::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  match '/home', :to => 'pages#home'
-  match '/paintballField',   :to => 'pages#paintballField'
-  match '/paintballMarker',    :to => 'pages#paintballMarker'
+  match 'home', :to => 'pages#home'
+  match 'paintballField', :to => 'pages#paintballField'
+  match 'paintballMarker', :to => 'pages#paintballMarker'
 
   get "pages/home"
   get "pages/paintballField"
