@@ -12,12 +12,6 @@
  *= require_tree .
  */
 
-.container {
-  width: 710px;
-   -webkit-box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
-box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
-}
-
 body {
   color:black;
   background-color:white;
@@ -25,18 +19,24 @@ body {
   background-attachment:fixed;
 }
 
+/* Headers */
+
 header {
   padding-top: 20px;
 }
 
 .headerTitle {
 	color: white;
+  font-family: Hoefler Text;
+  font-weight: normal;
 }
 
 header img {
   padding: 1em;
   background: #fff;
 }
+
+/* Div and sections */
 
 div {
   text-align: center;
@@ -46,9 +46,24 @@ div {
   margin-right: auto;
 }
 
+div.navigation {
+  text-align: left;
+  float: left;
+  width: 100px;
+  margin-left: 50px;
+  margin-right: 0px;
+  position:fixed;
+}
+
+.container {
+  width: 710px;
+   -webkit-box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+  box-shadow: 0px 0px 5px 10px rgba(10, 10, 10, 0.5);
+}
+
 section {
   margin-top: 1em;
-  font-size: 120%;
+  font-size: 100%;
   padding: 20px;
   background: #fff;
 }
@@ -82,8 +97,15 @@ a:visited {
 
 /* Navigation */
 
+.wikiLogo {
+  margin-top: 10px;
+  float: center;
+  margin-left: 10px
+}
+
 nav {
-  float: none;
+  margin-top: 20px;
+  float: left;
 }
 
 nav {
@@ -101,14 +123,15 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
-  display: inline-block;
+  display: list-item;
   padding: 0.2em 0;
+
 }
 
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
-  font-size: 120%;
+  font-size: 100%;
 }
 
 nav ul li a:visited {
@@ -120,12 +143,14 @@ nav ul li a:hover {
 }
 
 /* rounded corners */
-
+/*
 .round {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
 }
+
+/* Footer */
 
 footer {
   text-align: center;
@@ -139,3 +164,4 @@ footer {
 	text-align: center;
 	color: white;
 }
+*/

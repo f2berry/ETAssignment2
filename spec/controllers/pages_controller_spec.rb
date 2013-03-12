@@ -23,6 +23,13 @@ describe PagesController do
       response.should be_success
     end
   end
+
+   describe "GET 'paintballEquipement'" do
+    it "returns http success" do
+      get 'paintballEquipement'
+      response.should be_success
+    end
+  end
   
   describe "Make a test for the Home Page" do
 
@@ -36,10 +43,11 @@ describe PagesController do
 		response.should have_selector("header")
 	end
 
-	it "has footer" do
-		get 'home'
-		response.should have_selector("footer")
-	end
+#	it "has footer" do
+#		get 'home'
+#		response.should have_selector("footer")
+#	end
+
 
 	it "has nav" do
 		get 'home'
@@ -59,10 +67,10 @@ describe "Make a test for the First Page" do
 		response.should have_selector("header")
 	end
 
-	it "has footer" do
-		get 'paintballField'
-		response.should have_selector("footer")
-	end
+#	it "has footer" do
+#		get 'paintballField'
+#		response.should have_selector("footer")
+#	end
 
 	it "has nav" do
 		get 'paintballField'
@@ -82,13 +90,36 @@ describe "Make a test for the Second Page" do
 		response.should have_selector("header")
 	end
 
-	it "has footer" do
-		get 'paintballMarker'
-		response.should have_selector("footer")
-	end
+#	it "has footer" do
+#		get 'paintballMarker'
+#		response.should have_selector("footer")
+#	end
 
 	it "has nav" do
 		get 'paintballMarker'
+		response.should have_selector("nav")
+	end
+end
+
+describe "Make a test for the third Page" do
+
+	it "has good title" do
+		get 'paintballEquipement'
+		response.should have_selector("title", :content => "WikiRails | Paintball equipement")
+	end
+
+	it "has header" do
+		get 'paintballEquipement'
+		response.should have_selector("header")
+	end
+
+#	it "has footer" do
+#		get 'paintballEquipement'
+#		response.should have_selector("footer")
+#	end
+
+	it "has nav" do
+		get 'paintballEquipement'
 		response.should have_selector("nav")
 	end
 end
@@ -105,6 +136,10 @@ describe "Test all routes for wiki" do
 
 	it "routes to the second page" do
 		expect(:get => "/pages/paintballMarker").to route_to(:controller => "pages", :action => "paintballMarker")
+	end	
+
+	it "routes to the third page" do
+		expect(:get => "/pages/paintballEquipement").to route_to(:controller => "pages", :action => "paintballEquipement")
 	end	
 end
 

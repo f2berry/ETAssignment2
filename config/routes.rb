@@ -5,11 +5,12 @@ WikiRails::Application.routes.draw do
   match 'home', :to => 'pages#home'
   match 'paintballField', :to => 'pages#paintballField'
   match 'paintballMarker', :to => 'pages#paintballMarker'
+  match 'paintballEquipement', :to => 'pages#paintballEquipement'
 
   get "pages/home"
   get "pages/paintballField"
   get "pages/paintballMarker"
-
+  get "pages/paintballEquipement"
 
 
 

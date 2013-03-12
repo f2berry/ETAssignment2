@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def paintballMarker
   end
 
+  def paintballEquipement
+  end
+
 end

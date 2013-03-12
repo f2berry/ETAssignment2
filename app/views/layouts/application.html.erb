@@ -8,26 +8,33 @@
 </head>
 
 <body>
+<div class="navigation">
+    <%= image_tag("wikiLogo.png", :alt => "Example baniere", :class => "wikiLogo") %>
+    <nav>
+       <ul>
+        <li><HR WIDTH="50%"></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="paintballField">Paintball field</a></li>
+        <li><a href="paintballMarker">Paintball marker</a></li>
+        <li><a href="paintballEquipement">Paintball equipement</a></li>
+        <li><HR WIDTH="50%"></li>
+       </ul> 
+    </nav>
+  </div>  
 <div class="container">
   <header>
-    <h1 class="headerTitle">WIKIRAILS</h1>
+    <h1 class="headerTitle">WikiRailS</h1>
     <h2 class="headerTitle">The ultimate paintball database</h2>
-    <%= image_tag("baniere.jpg", :alt => "Example baniere", :class => "round") %>
+    <%= image_tag("baniere.jpg", :alt => "Example baniere") %>
   </header>
-  <nav class="round"> 
-     <ul>
-      <li><a href="home">Home</a></li>
-      <li><a href="paintballField">Paintball field</a></li>
-      <li><a href="paintballMarker">Paintball marker</a></li>
-     </ul> 
-  </nav>
-  <section class="round">
+  <section>
     <%= yield %>
   </section>
 </div>
 
 </body>
 
+<!-- 
 <footer>
   <nav class="round">
     <ul>
@@ -38,5 +45,6 @@
   </nav>
   <p class="footerText">Copyright François de Berry - 2013</p>
 </footer>
+-->
 
 </html>
