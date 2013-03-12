@@ -4,32 +4,43 @@
   <title>WikiRails | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %> 
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
-<div class="navigation">
-    <%= image_tag("wikiLogo.png", :alt => "Example baniere", :class => "wikiLogo") %>
+<div>
+  <div class="navigation">
+    <%= image_tag("wikiLogo.png", :alt => "wikiLogo", :class => "wikiLogo") %>
     <nav>
-       <ul>
-        <li><HR WIDTH="50%"></li>
-        <li><a href="home">Home</a></li>
-        <li><a href="paintballField">Paintball field</a></li>
-        <li><a href="paintballMarker">Paintball marker</a></li>
-        <li><a href="paintballEquipement">Paintball equipement</a></li>
-        <li><HR WIDTH="50%"></li>
-       </ul> 
+
+      <div id="conteneur-menu2">
+
+        <ul>
+          <li><HR WIDTH="50%"></li>
+          <li><a href="home">Home</a></li>
+          <li><a href="paintballField">Paintball field</a></li>
+          <li><a href="paintballMarker">Paintball marker</a></li>
+          <li><a href="paintballEquipement">Paintball equipement</a></li>
+          <li><HR WIDTH="50%"></li>
+        </ul> 
+
+      </div>
+
     </nav>
   </div>  
-<div class="container">
-  <header>
-    <h1 class="headerTitle">WikiRailS</h1>
-    <h2 class="headerTitle">The ultimate paintball database</h2>
-    <%= image_tag("baniere.jpg", :alt => "Example baniere") %>
-  </header>
-  <section>
-    <%= yield %>
-  </section>
+  <div class="container">
+    <header>
+      <h1 class="headerTitle">WikiRailS</h1>
+      <h2 class="headerTitle">The ultimate paintball database</h2>
+      <%= image_tag("baniere.jpg", :alt => "Example baniere") %>
+    </header>
+    <section>
+      <%= yield %>
+    </section>
+  </div>
 </div>
 
 </body>
